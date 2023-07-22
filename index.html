@@ -15,6 +15,12 @@ Hi!
 <div id="hexmap-1">
 </div>
 
+<div id="info">
+ID: <span id="hexID"></span>
+Terrain: <span id="hexTerrain"></span>
+Description: <span id="hexText"></span>
+</div>
+
 </body>
 
 <script type="text/javascript">
@@ -32,18 +38,25 @@ Hi!
 
 		S(document).ready(function(){
 
-		// Create an object attached to a DOM element with the ID "hexmap-1"
-		var hexmap = S.hexmap('hexmap-1');
+			// Create an object attached to a DOM element with the ID "hexmap-1"
+			var hexmap = S.hexmap('hexmap-1');
 
-		// Position the hexes and scale them to the container
-		hexmap.positionHexes().resize();
+			// Position the hexes and scale them to the container
+			hexmap.positionHexes().resize();
 
-		hexmap.setColour(function(hex){
-			return {'background-color': terrainMap[hex.terrain], 'color':'black'}
-		}); //need a failsafe for unrecognized terrain
+			hexmap.setColour(function(hex){
+				return {'background-color': terrainMap[hex.terrain], 'color':'black'}
+			}); //need a failsafe for unrecognized terrain
 
+			hexmap.on('mouseover',function(e){
+				S('#hexTerrain').html(e.hex.terrain)
+				S('#hexID').html(e.hex.id)
+				S('#hexText').html(e.hex.description)
+
+			});
 		});
-	}
+
+		}
 	function error(e,a){
 		S('#hexmap-1').append('<p>Failed to load '+a.url+'<\/p>');
 	}
