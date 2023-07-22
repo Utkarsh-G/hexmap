@@ -1,4 +1,6 @@
 <head>
+<title>Map</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <script type="text/javascript" src="js/stuquery.js"></script>
 <script type="text/javascript" src="js/stuquery.hexmap.js"></script>
 <link rel="stylesheet" href="css/stuquery.hexmap.css">
@@ -16,6 +18,15 @@ Hi!
 </body>
 
 <script type="text/javascript">
+	const terrainMap = {
+		"Unexplored" : "#666666",
+		"Grassland" : "#00cc00",
+		"Mountain" : "#994d00",
+		"Desert" : "#ffc266",
+		"Tundra" : "#e6f7ff",
+		"Water" : "#1aa3ff",
+	}
+
 	function success(data,a){
 		S('#hexmap-1').append("<code>"+data+"<\/code>");
 
@@ -28,8 +39,8 @@ Hi!
 		hexmap.positionHexes().resize();
 
 		hexmap.setColour(function(hex){
-			return {'background-color':hex.colour, 'color':'black'}
-		});
+			return {'background-color': terrainMap[hex.terrain], 'color':'black'}
+		}); //need a failsafe for unrecognized terrain
 
 		});
 	}

@@ -1,8 +1,8 @@
 {
 	"layout":"odd-r",
 	"hexes": {
-		"1000":{"n":"Unnamed","id":1000,"name":"Unnamed","q":0,"r":0,"terrain":"Unexplored","icon":"None","colour":"rgb(0, 0, 102)","description":""},
-		"1001":{"n":"Unnamed","id":1001,"name":"Unnamed","q":0,"r":1,"terrain":"Unexplored","icon":"None","colour":"rgb(0, 3, 102)","description":""},
+		"1000":{"n":"Unnamed","id":1000,"name":"Unnamed","q":0,"r":0,"terrain":"Water","icon":"None","colour":"rgb(0, 0, 102)","description":""},
+		"1001":{"n":"Unnamed","id":1001,"name":"Unnamed","q":0,"r":1,"terrain":"Water","icon":"None","colour":"rgb(0, 3, 102)","description":""},
 		"1002":{"n":"Unnamed","id":1002,"name":"Unnamed","q":0,"r":2,"terrain":"Unexplored","icon":"None","colour":"rgb(0, 6, 102)","description":""},
 		"1003":{"n":"Unnamed","id":1003,"name":"Unnamed","q":0,"r":3,"terrain":"Unexplored","icon":"None","colour":"rgb(0, 9, 102)","description":""},
 		"1004":{"n":"Unnamed","id":1004,"name":"Unnamed","q":0,"r":4,"terrain":"Unexplored","icon":"None","colour":"rgb(0, 12, 102)","description":""},

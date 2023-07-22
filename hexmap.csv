@@ -1,3 +1,5 @@
+NOTE Outdated. If updating csv, will need to use website to map to hexjson
+
 id,name,q,r,terrain,icon,colour,description
 1000,"Unnamed",0,0,"Unexplored","None","rgb(102, 102, 102)",""
 1001,"Unnamed",0,1,"Unexplored","None","rgb(102, 102, 102)",""
